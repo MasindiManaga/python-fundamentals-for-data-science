@@ -1,6 +1,14 @@
-#--------------------------
 """
-Lesson 2 - Operators and Input
+Lesson 2: Operators and Input
+
+This lesson focuses on how Python evaluates expressions by combining:
+- User input
+- Type conversion
+- Operators
+- Boolean logic
+
+The goal is to understand how raw input becomes
+meaningful decisions in a program.
 
 Everything here revolves around expressions:
 - Inputs → processed by operators → outputs
@@ -109,7 +117,7 @@ Use parenthesis for clarity 10 + (2 * 3)
 
 """
 
-#---------------------------
+
 print("===Code starts here====")
 #Examples
 total = 10 + 3
