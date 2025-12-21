@@ -7,6 +7,8 @@ This repository contains my Python learning exercises as I progress through Pyth
 - Operators and user input (`02_operators_input.py`)
 - Conditional statements (`03_conditionals.py`)
 - Loops and iteration (`04_loops_iteration.py`)
+- Lists (`05_lists.py`)
+- Functions (`06_functions.py`)
 
 ## How to Run
 1. Clone the repository
