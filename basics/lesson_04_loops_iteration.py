@@ -1,4 +1,3 @@
-#----------------------
 """
 Lesson 4 - Loops and repetition thinking
 
@@ -146,7 +145,7 @@ Before writing a loop, answer:
 """
 
 
-print("===Project 1: Menu-Based System===")
+#Project 1: Menu-Based System
 print("\n")
 
 #menu and menu selection
@@ -159,30 +158,26 @@ while True:
     print("5. Stone")
     print("6. Exit")
 
-    appetizers = input("Which appetizer would you like?")
+    choice = input("Which option would you like? ")
 
-    if appetizers == "1":
+    if choice == "1":
         print("Coke\n")
 
-    elif appetizers == "2":
+    elif choice == "2":
         print("Fanta Orange\n")
 
-    elif appetizers == "3":
+    elif choice == "3":
         print("Sprite\n")
 
-    elif appetizers == "4":
+    elif choice == "4":
         print("Granadilla\n")
 
-    elif appetizers == "5":
+    elif choice == "5":
         print("Stone\n")
 
-    elif appetizers == "6":
+    elif choice == "6":
         print("Exiting the menu\n")
         break
-
     else:
-        print("No option picked!")
-        break
-
-print("\n")
-
+        print("No option picked! Please try again.\n")
+        continue

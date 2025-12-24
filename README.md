@@ -28,6 +28,37 @@ Mini-projects include:
 - Access eligibility checker
 - Personal expense reasoner
 
+## Lesson 3: Conditionals and Decision-Making
+
+This lesson introduces conditional logic, which allows programs to make decisions based on rules and conditions.
+The focus is on understanding how programs choose one execution path over another using truth values.
+
+Key concepts covered:
+- if, elif, and else statements
+- Boolean conditions
+- Nested decision logic
+- Input normalization (lower(), strip())
+
+Mini-projects include:
+- Role classification system
+- Smart feedback generator based on performance ranges
+- Introductory decision logic for system-like behavior (e.g. elevators)
+
+## Lesson 4: Loops and Repetition Thinking
+
+This lesson introduces loops, which allow programs to repeat actions and remain active over time.
+The emphasis is on understanding when and why repetition is needed, not just how to write loops.
+
+Key concepts covered:
+- while loops and condition-controlled repetition
+- Loop termination using break
+- Avoiding infinite loops
+- Designing user-driven systems
+
+Mini-projects include:
+- Menu-based system with continuous user interaction
+
+
 ---
 
 ## Why This Matters for Data Science
