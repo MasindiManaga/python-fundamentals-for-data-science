@@ -1,4 +1,3 @@
-#----------------------------------------
 """
 LESSON 5 — Lists (Expanded, System-Level Understanding)
 
@@ -9,6 +8,10 @@ grow, shrink, and change.
 
 I can think of a list as:
 A row of labeled boxes, each box pointing to something.
+
+- You can create an empty list using either square brackets or the list() constructor.
+- You can add elements using append(), insert(), or concatenate().
+- You can remove elements using remove().
 
 !!! A list does not store values directly, it stores references just like variables.
 
@@ -162,5 +165,114 @@ If no → single variable.
 
 !!!Design first, code second.
 ~Lists are about organization of experience~
+
+
 """
-#-----------------------------------------
+#List of numbers
+nums = [25, 12, 36, 95, 14] #Assign multiple numbers using square brackets
+print(nums) #prints the list
+print(nums[0]) #prints the first number
+print(nums[4]) #prints the last number
+print(nums[-1]) #prints the last number
+print(nums[2:])#prints number in between from 36-14 -slicing method
+
+#List of names
+names = ['Masindi', 'karin', 'john']
+print(names)
+
+#List of different types of data
+values = [9.5, 'Masindi', 25]
+
+#List of list
+mil = [nums, names]
+print(mil)
+
+#check for length
+if len(mil) == 0:
+    print("The list is empty.")
+
+#Operations on list
+nums.append(45) #adds number at the end
+print(nums)
+
+nums.insert(2,77)
+print(nums) #inserts number at the index stated initially
+
+nums.remove(14)
+print(nums) #deletes the number you stated
+
+nums.pop(1) #deletes the number at index 1
+print(nums)
+
+nums.pop()
+print(nums) #last element is removed
+
+print(min(nums))
+print(max(nums))
+print(sum(nums))
+
+"""
+Push - adds elements
+Pop - removes elements
+"""
+
+#delete multiple values
+del nums[2:]
+print(nums)
+
+#add multiple values
+nums.extend([29, 12, 14, 36])
+print(nums)
+
+nums.sort()
+print(nums)
+
+
+#Project 1: Collection  Builder
+"""Show that a list can start empty and grow over time."""
+numbers = [] #creates an empty list
+present_val = 4 #start the counter value at 4
+
+if len(numbers) == 0:
+    print("The list is empty.")
+
+while len(numbers) < 5:
+    numbers.append(present_val)
+    present_val +=2
+
+print(numbers)
+
+#Project 2: History Tracker
+"""Demonstrate lists as memory over time"""
+actions = []
+
+while True:
+    action = input("What do you want to do (login, view, logout): ").lower().strip()
+    actions.append(action)
+
+    if action == "login":
+        print("Logged in.")
+    elif action == "view":
+        print(f"These are the actions: {actions}")
+    elif action == "logout":
+        print("Logged out.")
+        break
+    else:
+        print("invalid action")
+        continue
+
+#Project3: List inspection (Read-only)
+"""indexing, negative indexing, slicing without mutation risk."""
+list_inst = []
+number = 1
+
+for i in range(10):
+    list_inst.append(number)
+    number += 1
+    print(list_inst)
+
+print("\n")
+print(list_inst[0])
+print(list_inst[-1])
+print(list_inst[2:])
+print(list_inst[:-2])
