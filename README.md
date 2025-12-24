@@ -85,8 +85,6 @@ Key ideas include:
 
 Mini-projects include:
 - Age calculator
-- Eligibility checker
-- Expense analyzer
 ---
 
 ## Why This Matters for Data Science

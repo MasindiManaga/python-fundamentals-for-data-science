@@ -1,4 +1,3 @@
-#--------------------------------------
 """
 Lesson 6 - Functions (Expanded, System Thinking)
 
@@ -183,4 +182,10 @@ I write steps.
 After functions:
 I design behaviors.
 """
-#----------------------------------------
+from basics.lesson_01_variables_and_types import age_life_stats_calc
+
+
+#Project 1: Age calculator function
+def calculate_age():
+    age = age_life_stats_calc()
+    print(f"Your age is {age}")

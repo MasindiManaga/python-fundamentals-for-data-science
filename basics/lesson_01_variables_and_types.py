@@ -234,6 +234,7 @@ def age_life_stats_calc():
     days = individual_age * 365
 
     print(individual_age)
+    return individual_age
     print(f"You have lived for {months} months and {days} number of days")
 
 print("\n")

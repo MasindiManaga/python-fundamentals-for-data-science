@@ -276,3 +276,4 @@ print(list_inst[0])
 print(list_inst[-1])
 print(list_inst[2:])
 print(list_inst[:-2])
+
