@@ -58,7 +58,35 @@ Key concepts covered:
 Mini-projects include:
 - Menu-based system with continuous user interaction
 
+## Lesson 5: Lists
 
+This lesson introduces lists as ordered containers for storing and tracking data over time.
+
+Key ideas include:
+- Growing collections
+- Tracking history
+- Indexing and slicing
+- Lists as system memory
+
+Mini-projects include:
+- Collection builder
+- History tracker
+- List inspection tools
+
+## Lesson 6: Functions
+
+This lesson introduces functions as reusable, trusted units of logic.
+
+Key ideas include:
+- Input/output contracts
+- Returning vs printing
+- Scope and isolation
+- Reusability and composition
+
+Mini-projects include:
+- Age calculator
+- Eligibility checker
+- Expense analyzer
 ---
 
 ## Why This Matters for Data Science
