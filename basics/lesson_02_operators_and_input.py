@@ -8,7 +8,7 @@ This lesson focuses on how Python evaluates expressions by combining:
 - Boolean logic
 
 The goal is to understand how raw input becomes
-meaningful decisions in a program.
+meaningful decisions in a program
 
 Everything here revolves around expressions:
 - Inputs → processed by operators → outputs
@@ -117,72 +117,66 @@ Use parenthesis for clarity 10 + (2 * 3)
 
 """
 
-
-print("===Code starts here====")
 #Examples
 total = 10 + 3
 remainder = 10 % 3
 
 print(total, remainder)
 
-print("===Project 1: Decision based profile system===")
-"""
-A decision-based profile system that:
--Asks for values
--Converts them
--Performs comparisons
--Produces meaningful output
-"""
+# Project 1: Decision based profile system
+def run_value_comparison():
+    value_1 = int(input("Please enter a value: "))
+    value_2 = int(input("Please enter a value: "))
+    result = compare_values(value_1, value_2)
+    print(result)
 
-value_1 = int(input("Please enter a value: "))
-value_2 = int(input("Please enter a value: "))
-comparisons = value_1 >= value_2
-
-print(comparisons)
-print("\n")
-
-print("===Project 2: Access Eligibility Checker===")
-"""This system determines whether a person is allowed access to something (a building, service, or event) based on conditions.
-
-The program’s responsibility is to:
-- Collect information from a user
-- Interpret that information correctly
-- Evaluate logical conditions
-- Produce a clear decision outcome
-"""
-
-#data collection for event
-guest_age = int(input("How old are you?"))
-guest_id = (input("Do you have your id? (Use capital letter Y or N)"))
-
-if guest_age >= 18 and guest_id == "Y":
-    print("You may enter")
-else:
-    print ("You may not enter.")
-
+def compare_values(value_1: int, value_2: int) -> bool:
+    """
+       Compares two integer values and returns True
+       if the first is greater than or equal to the second.
+       """
+    return value_1 >= value_2
 
 print("\n")
 
-print("===Project 3: Personal Expense Reasoner===")
-"""
-This system takes financial information and produces reasoned feedback, not just calculations.
-It doesn’t manage money — it interprets it.
+# Project 2: Access Eligibility Checker
 
-The program:
-- Accepts numeric inputs related to money
-- Performs calculations
-- Compares values
-- Explains the outcome in plain language
-"""
+def run_access_checker():
+    guest_age = int(input("How old are you? "))
+    guest_id = input("Do you have your ID? (Y/N):")
 
-#calculate my balance after each purchase
-balance = float(input("Please enter the balance in your account: "))
-purchase_price = float(input("How much did you spend? "))
+    if is_eligible_for_access(guest_age, guest_id):
+        print("You may enter")
+    else:
+        print("You may not enter")
 
-remaining_balance = balance - purchase_price
+def is_eligible_for_access(age: int, has_id: str) -> bool:
+    """
+    Determines access eligibility based on age and ID possession.
+    """
+    return age >= 18 and has_id == "Y"
 
-if remaining_balance < 1000:
-    print(f"You are on a low balance: {remaining_balance}")
-else:
-    print(f"You are on a good balance: {remaining_balance}")
 print("\n")
+
+# Project 3: Personal Expense Reasoner
+def run_expense_reasoner():
+    balance = float(input("Please enter your account balance: "))
+    purchase_price = float(input("How much did you spend? "))
+
+    remaining_balance = evaluate_balance(balance, purchase_price)
+
+    if remaining_balance < 1000:
+        print(f"You are on a low balance: {remaining_balance}")
+    else:
+        print(f"You are on a good balance: {remaining_balance}")
+
+def evaluate_balance(balance: float, purchase_price: float) -> float:
+    """
+    Calculates remaining balance after a purchase.
+    """
+    return balance - purchase_price
+
+if __name__ == "__main__":
+    run_value_comparison()
+    # run_access_checker()
+    # run_expense_reasoner()

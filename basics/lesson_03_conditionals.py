@@ -1,6 +1,13 @@
-#--------------------
 """
-Lesson 3 - Conditionals and Decision-Making
+Lesson 3: Conditionals and Decision-Making
+
+This lesson demonstrates how programs make decisions
+using if, elif, and else statements.
+
+The focus is on:
+- Boolean conditions
+- Multiple decision paths
+- Ensuring every decision has a defined outcome
 
 Conditionals are the decision engine of all software:
 - Games
@@ -49,10 +56,9 @@ elif condition_2:
 else:
     fallback
 """
-#---------------------
 
-print("""===Project 1: Role Classification System===""")
-#A system that classifies a person into one role based on rules.
+# Project 1: Role Classification System
+# Classifies a user into a department role based on input
 
 role = input("What is your role in a department?(one word ans) ->>").lower() #makes input case-sensitive
 
@@ -67,7 +73,7 @@ else:
 
 print("\n")
 
-print("""===Project 2: Smart Feedback Generator===""")
+# Project 2: Smart Feedback Generator
 #A program that gives feedback based on performance ranges.
 
 is_student = input("Are you a student? (Y/N)->>").lower().strip()
@@ -90,14 +96,6 @@ else:
 
 
 print("\n")
-
-
-print("""===Project 3: Simple Elevator Decision Logic===""")
-#A system that decides what an elevator should do based on state.
-
-num = 0
-num += 1
-
 
 
 

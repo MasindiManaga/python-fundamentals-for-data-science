@@ -1,7 +1,16 @@
-#----------------------------------
-#Lession 1 - Variable and Basic Types
-
 """
+Lesson 1 - Variable and Basic Types
+
+This module explores:
+- How Python variables reference objects in memory
+- Core data types
+- Mutability vs immutability
+- Type inspection and identity
+- Output formatting
+
+The lesson combines conceptual explanations with
+practical exercises and mini-projects.
+
 1. What is a variable?
 - It is a name or label
 - It points to a value somewhere in memory
@@ -117,8 +126,8 @@ print(id(a), id(b))
 
 """
 
-#Coding starts below ⇩
-print("===Printing and Output formating===")
+
+#Printing and Output formating
 x = "Hello"
 print(type(x))
 print (type(2.15))
@@ -131,7 +140,7 @@ print(id(a), id(b))
 
 print("\n")
 
-print("===Exercise A - variables ===")
+# Exercise A: Variables
 
 #variables
 name = "Masindi"
@@ -152,7 +161,7 @@ print(name, birth_year, present_year, is_student)
 print("\n")
 
 
-print("===Exercise B -Types===")
+# Exercise B -Types
 
 c = 10
 d = 10.0
@@ -168,7 +177,7 @@ print(type(g))
 
 print("\n")
 
-print("===Exercise C- Reassignment===")
+# Exercise C- Reassignment
 x = 5
 print("1st assignment:", x)
 x = x + 3
@@ -181,7 +190,7 @@ print(x)
 
 print("\n")
 
-print("===Exercise D- Identity===")
+# Exercise D- Identity
 
 x = 1000
 y = 1000
@@ -190,112 +199,114 @@ print(type(x), type(y))
 print("\n")
 
 
-#My Playground -------------------
-print("===PROJECT 1 — “Student Identity Card Generator”===")
-"""
-Prints a realistic student card layout
-"""
 
-object_name = "Campus Card Student"
-name = "Masindi"
-surname = "Managa"
-qualification_id = "Bsc IT DS"
-student_no = "EDUV4840983"
-barcode_student = "| |||||| || || | | ||| |||| || |"
+# PROJECT 1 — “Student Identity Card Generator”
+def student_identity_card():
+    object_name = "Campus Card Student"
+    first_name = "Masindi"
+    last_surname = "Managa"
+    qualification_id = "Bsc IT DS"
+    student_no = "EDUV4840983"
+    barcode_student = "| |||||| || || | | ||| |||| || |"
 
-print(f"""
-object {object_name} 
-name:  {name}
-surname: {surname}
-qualification: {qualification_id}
-student_no: {student_no}
-barcode: {barcode_student}
-""")
+    print(f"""
+    object {object_name} 
+    name:  {first_name}
+    surname: {last_surname}
+    qualification: {qualification_id}
+    student_no: {student_no}
+    barcode: {barcode_student}
+    """)
 
 print("\n")
 
-print("===PROJECT OPTION 2 — “Age & Life Stats Calculator”")
-"""
-Calculates your age and how long you have been on earth.
-"""
+# PROJECT OPTION 2 — “Age & Life Stats Calculator”
 
-#calculator for age
-pres_year = int(input("What is the year today?"))
-bir_year = int(input("What is your birth year?"))
 
-individual_age = pres_year - bir_year
+def age_life_stats_calc():
+    pres_year = int(input("What is the year today?"))
+    bir_year = int(input("What is your birth year?"))
 
-#calculator for life
-months = individual_age * 12
-days = individual_age * 365
+    individual_age = pres_year - bir_year
 
-print(individual_age)
-print(f"You have lived for {months} months and {days} number of days")
+    #calculator for life
+    months = individual_age * 12
+    days = individual_age * 365
+
+    print(individual_age)
+    print(f"You have lived for {months} months and {days} number of days")
 
 print("\n")
 
-print("===Project 3: ID Card===")
+# Project 3: ID Card
 
-title = "Republic of South Africa National Identity card"
-surname = "Smith"
-name = "Sam"
-sex_symbol = "M"
-nationality = "RSA"
-id_no = 32415243628383238
-dob = "12 Jan 1993"
-birth_country = "RSA"
-status = "citizen"
+def id_card():
+    title = "Republic of South Africa National Identity card"
+    surname = "Smith"
+    name = "Sam"
+    sex_symbol = "M"
+    nationality = "RSA"
+    id_no = 32415243628383238
+    dob = "12 Jan 1993"
+    birth_country = "RSA"
+    status = "citizen"
 
-print(f"""
-title: {title}
-surname: {surname}
-name: {name}
-sex: {sex_symbol}
-nationality: {nationality}
-id_no: {id_no}
-dob: {dob}
-birth_country: {birth_country}
-status: {status}
-""")
+    print(f"""
+    title: {title}
+    surname: {surname}
+    name: {name}
+    sex: {sex_symbol}
+    nationality: {nationality}
+    id_no: {id_no}
+    dob: {dob}
+    birth_country: {birth_country}
+    status: {status}
+    """)
 
 print("\n")
 
-print("===PROJECT OPTION 3 — “Python Object Inspector”===")
+# PROJECT OPTION 3 — “Python Object Inspector”
 """A fun tool: you assign values and print their type and identity (memory address).
 This helps deepen your understanding of Python’s data model."""
 
-black = "black"
-num = 1
-is_child = True
-r = [1,2,3,4]
-o = None
-com_num = 2 + 5*num
+def object_inspector():
+    black = "black"
+    num = 1
+    is_child = True
+    r = [1,2,3,4]
+    o = None
+    com_num = 2 + 5*num
 
-print(type(black), id(black))
+    print(type(black), id(black))
 
-print(type(12.46), id(12.46))
-print(type(num), id(num))
-print(type(is_child),id(is_child))
-print(type(r), id(r))
-print(type(o), id(o))
-print(type(com_num), id(com_num))
+    print(type(12.46), id(12.46))
+    print(type(num), id(num))
+    print(type(is_child),id(is_child))
+    print(type(r), id(r))
+    print(type(o), id(o))
+    print(type(com_num), id(com_num))
 print("\n")
-"""Types can be used for debugging"""
+#Types can be used for debugging
 
-print("===FINAL PROJECT FOR THIS LESSON===")
-print("Personal Profile System v1.0")
+#Personal Profile System v1.0
 """A personal profile system is a very small, beginner-friendly software idea whose purpose is to represent a person in a structured way using data, and then present that data meaningfully.
 
 Think of it as the digital equivalent of a paper profile — not a database yet, not an app yet — just a program that knows who someone is."""
 
-full_names = input("What is your full name?")
-present_age = input("How old are you?")
-id_number = int(input("What is your id?"))
-job_des = input("What is your job?")
+def profile_system():
+    full_names = input("What is your full name?")
+    present_age = input("How old are you?")
+    id_number = int(input("What is your id?"))
+    job_des = input("What is your job?")
 
-print(f"""
-full_names: {full_names}
-present_age: {present_age}
-id_number: {id_number}
-job_des: {job_des}
-""")
+    print(f"""
+    full_names: {full_names}
+    present_age: {present_age}
+    id_number: {id_number}
+    job_des: {job_des}
+    """)
+
+if __name__ == "__main__":
+    student_identity_card()
+    # age_and_life_stats()
+    # python_object_inspector()
