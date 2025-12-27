@@ -112,9 +112,7 @@ This repository serves as a strong foundation before moving into exploratory dat
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/python-fundamentals-for-data-science.git
-
-## How to Run
-1. Clone the repository
+   
 2. Open your Python environment (e.g., PyCharm)
 3. Run the `.py` files individually
 
